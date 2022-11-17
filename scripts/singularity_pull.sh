@@ -24,3 +24,5 @@ else
     echo "Pulling image at ${IMAGE_PATH}"
     singularity pull --force --name jupyter-datascience.sif docker://jupyter/datascience-notebook
     echo "Image successfully pulled to ${IMAGE_PATH}"
+
+fi
