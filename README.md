@@ -13,7 +13,7 @@ Table of Contents:
 
 ## Sockeye and its environment
 
-placeholder
+Sockeye is a computing platform that uses PBS as its job manager instead of SLURM, hence for the documentation of how to submit PBS jobs and specifying options, please see [here](https://help.altair.com/2022.1.0/PBS%20Professional/PBSUserGuide2022.1.pdf)
 
 ## Setup a singularity container
 
@@ -28,3 +28,4 @@ placeholder
 placeholder
 
 
+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
