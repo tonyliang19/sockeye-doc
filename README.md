@@ -19,12 +19,17 @@ Things you should know:
 
 - Once you ssh into the platform, your pwd likely to be: `/home/$USER`, whereas `$USER` is default environment variable and you should also have `ALLOC=the allocation code`, if not defined you could add it to `~/.bash_profile`.
 - You will be working in two main directories: `/arc/project/$ALLOC/$USER` or `/scratch/$ALLOC/$USER`. The first one is to store final results/outputs of your works, the latter one for all other purposes, and recommended to use for experiments. **NOTE**: Defining the two paths into two env would ease your life much.
+
+**Some useful modules to use**:
+- module load miniconda3 , this allows you to use conda on Sockeye (explain later)
+- module load git, this allows you to use git (must be loaded first via module load)
+- module load cuda cudnn, these are two modules that are used when requires GPU access
+
 ```bash
 # Assuming this is the bash_profile
 if ... then
     ...
 fi
-
 # This is the allocation code (usually defined by PI)
 ALLOC=st-<pi_name>
 export ALLOC
