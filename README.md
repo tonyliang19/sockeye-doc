@@ -38,11 +38,55 @@ SCRATCH_PATH=/scratch/$ALLOC/$USER
 export SCRATCH_PATH
 ```         
 
-
 ## Setup a singularity container
 
+Singularity is a type of containerization as Docker, and is the software mainly used on Sockeye. We could use this to spawn some interactive session like Jupyter Lab. It is very similar to Docker, where you pull remote image to your local (this case Sockeye), and then access this image every time we want to mount volumes from the image. Conventionally, store this image in your `$PROJECT_PATH` rather than `$SCRATCH_PATH` For this you need to run this following script or see [here](jupyter_singularity.sh):
 
-placeholder
+```bash
+#!/bin/bash
+
+# Load required modules on sockeye
+module load gcc 
+module load singularity
+
+# Chance to the directory you want to store the image
+# For easiness of storing files, I purposedly stored this to an extra dir prior to create it
+
+# This is the path to store the image
+# You could change the name of your image
+# We called it "jupyter-datascience.sif" here, .sif extension is must
+IMAGE_PATH=$PROJECT_PATH/images
+if [-d "IMAGE_PATH"];
+then
+    echo "This path does not exist yet, creating it now"
+    mkdir -p $IMAGE_PATH
+    cd $IMAGE_PATH
+    echo "Path created at ${IMAGE_PATH} and image pulled to here"
+    singularity pull --force --name jupyter-datascience.sif docker://jupyter/datascience-notebook
+    echo "Image successfully pulled to ${IMAGE_PATH}"
+else
+    cd $IMAGE_PATH
+    echo "Pulling image at ${IMAGE_PATH}"
+    singularity pull --force --name jupyter-datascience.sif docker://jupyter/datascience-notebook
+    echo "Image successfully pulled to ${IMAGE_PATH}"
+```
+
+After running above code snippet by order, or by the [sh file](jupyter_singularity.sh). You should expect to see like:
+```markdown
+INFO: Converting OCI blobs to SIF format
+INFO: Starting build...
+Getting image source signatures
+copying blob ....
+copying blob ....
+
+...
+...
+...
+
+INFO: Creating SIF file...
+```
+And it is normal to see some warnings there or xxx skipped already exists.
+
 
 ## Setup a conda environment
 
