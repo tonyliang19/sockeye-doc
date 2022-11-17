@@ -11,7 +11,7 @@ module load singularity
 # You could change the name of your image
 # We called it "jupyter-datascience.sif" here, .sif extension is must
 IMAGE_PATH=$PROJECT_PATH/images
-if [-d "IMAGE_PATH"];
+if [ -d "IMAGE_PATH" ];
 then
     echo "This path does not exist yet, creating it now"
     mkdir -p $IMAGE_PATH
