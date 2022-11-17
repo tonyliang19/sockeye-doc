@@ -20,6 +20,23 @@ Things you should know:
 - Once you ssh into the platform, your pwd likely to be: `/home/$USER`, whereas `$USER` is default environment variable and you should also have `ALLOC=the allocation code`, if not defined you could add it to `~/.bash_profile`.
 - You will be working in two main directories: `/arc/project/$ALLOC/$USER` or `/scratch/$ALLOC/$USER`. The first one is to store final results/outputs of your works, the latter one for all other purposes, and recommended to use for experiments. **NOTE**: Defining the two paths into two env would ease your life much.
 
+Directories on sockeye:
+- home: /home/$cwl
+    + coding scripts, pipelines that you don't want to share
+- project: /arc/project/$alloc-code
+    + Project data/raw inputs
+    + Big/shared software
+- scratch: /scratch/$alloc-code
+    + batch jobs
+    + job scripts
+    + final output, important intermediate files 
+    + clean up regularly  
+
+Useful commands:
+ - groups your-cwl ---> shows your allocation
+ - print_quota ---> show storage and file limits
+ - print_members ---> show who's on your team
+
 **Some useful modules to use**:
 - module load miniconda3 , this allows you to use conda on Sockeye (explain later)
 - module load git, this allows you to use git (must be loaded first via module load)
