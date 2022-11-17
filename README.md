@@ -8,8 +8,8 @@ This is a documentaion for setup singularity container + conda environment on so
 Table of Contents:
  1. [Sockeye and its environment](#sockeye-and-its-environment)
  2. [Setup a singularity container](#setup-a-singularity-container)
- 3. [Setup a conda environment](#setup-a-conda-environment)
- 4. [Running jobs to spawn your container](#running-jobs-to-spawn-your-container)
+ 3. [Running jobs to spawn your container](#running-jobs-to-spawn-your-container)
+ 4. [Setup a conda environment](#setup-a-conda-environment)
 
 ## Sockeye and its environment
 
