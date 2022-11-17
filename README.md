@@ -19,10 +19,28 @@ Things you should know:
 
 - Once you ssh into the platform, your pwd likely to be: `/home/$USER`, whereas `$USER` is default environment variable and you should also have `ALLOC=the allocation code`, if not defined you could add it to `~/.bash_profile`.
 - You will be working in two main directories: `/arc/project/$ALLOC/$USER` or `/scratch/$ALLOC/$USER`. The first one is to store final results/outputs of your works, the latter one for all other purposes, and recommended to use for experiments. **NOTE**: Defining the two paths into two env would ease your life much.
+```bash
+# Assuming this is the bash_profile
+if ... then
+    ...
+fi
 
+# This is the allocation code (usually defined by PI)
+ALLOC=st-<pi_name>
+export ALLOC
+
+# This is the path to project
+PROJECT_PATH=/arc/project/$ALLOC/$USER
+export PROJECT_PATH
+
+# This is the path to scratcg
+SCRATCH_PATH=/scratch/$ALLOC/$USER
+export SCRATCH_PATH
+```         
 
 
 ## Setup a singularity container
+
 
 placeholder
 
