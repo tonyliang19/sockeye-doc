@@ -90,13 +90,12 @@ copying blob ....
 
 INFO: Creating SIF file...
 ```
-And it is normal to see some warnings there or xxx skipped already exists.
+And it is normal to see some warnings there or xxx skipped already exists. After having the container image stored preferredly in your project directory, then you could start submitting a job to PBS and run an extra ssh session from your local computer mounted by Jupyter container.
 
-
-## Setup a conda environment
+## Running jobs to spawn your container
 
 placeholder
 
-## Running jobs to spawn your container
+## Setup a conda environment
 
 placeholder
