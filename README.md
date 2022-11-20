@@ -212,6 +212,8 @@ Example:
     singularity exec --home $SCRATCH_PATH \
     container=$PROJECT_PATH/<$IMAGE_PATH>/image.sif \
     command=jupyter notebook 
+
+    Add --nv option to denote make use of GPU allocations
 """
 
 
@@ -226,4 +228,36 @@ singularity exec \
 
 ## Setup a conda environment
 
-placeholder
+Assuming you have already installed a jupyter container following earlier instructions, we could also create a *custom* environment with conda:
+
+```bash
+# 1. Launch a shell with the same container on a Sockeye login node
+
+# Make sure to load the following modules:
+module load gcc singularity
+
+# Run the shell
+
+singularity shell \
+    --home $SCRATCH_PATH \
+    --env XDF_CACHE_HOME=$SCRATCH_PATH \
+    PROJECT_PATH/IMAGE_PATH/jupyter-datascience.sif
+
+# Then singularity container will launch, and run
+# following commands to create the env, once inside
+# the singularity container.
+
+
+# ENV_NAME is the name of dir to store your env
+# This env could be created in either $PROJECT_PATH
+# or $SCRATCH_PATH, where the first one is recommended
+conda create --prefix $PROJECT_PATH/ENV_NAME
+
+# 2. Add the ipykernel module to this newly created env
+# This step is a must!!
+
+conda install -y ipykernel --prefix $PROJECT_PATH/ENV_NAME
+
+
+
+```
