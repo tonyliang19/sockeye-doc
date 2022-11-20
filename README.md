@@ -20,6 +20,8 @@ Things you should know:
 - Once you ssh into the platform, your pwd likely to be: `/home/$USER`, whereas `$USER` is default environment variable and you should also have `ALLOC=the allocation code`, if not defined you could add it to `~/.bash_profile`.
 - You will be working in two main directories: `/arc/project/$ALLOC/$USER` or `/scratch/$ALLOC/$USER`. The first one is to store final results/outputs of your works, the latter one for all other purposes, and recommended to use for experiments. **NOTE**: Defining the two paths into two env would ease your life much.
 
+    ** Project storage is mounted read-write on login, data transfer and interactive nodes but read-only on compute nodes.**
+
 Directories on sockeye:
 - home: /home/$cwl
     + coding scripts, pipelines that you don't want to share
@@ -41,6 +43,12 @@ Useful commands:
 - module load miniconda3 , this allows you to use conda on Sockeye (explain later)
 - module load git, this allows you to use git (must be loaded first via module load)
 - module load cuda cudnn, these are two modules that are used when requires GPU access
+
+
+Storage Workflow:
+1. Copy/transfer data to $PROJECT_PATH
+2. Login to Sockeye, and modify job scripts in $SCRATCH_PATH
+3. Submit jobs that read data from $PROJECT_PATH, and writes output to $SCRATCH_PATH
 
 ```bash
 # Assuming this is the bash_profile
