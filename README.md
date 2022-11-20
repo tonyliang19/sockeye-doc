@@ -241,7 +241,7 @@ module load gcc singularity
 singularity shell \
     --home $SCRATCH_PATH \
     --env XDF_CACHE_HOME=$SCRATCH_PATH \
-    PROJECT_PATH/IMAGE_PATH/jupyter-datascience.sif
+    $PROJECT_PATH/images/jupyter-datascience.sif
 
 # Then singularity container will launch, and run
 # following commands to create the env, once inside
