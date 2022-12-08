@@ -1,3 +1,7 @@
+# changelog and other files
+changelog.md
+secrets.md
+
 # Jupyter alike objects
 .ipynb_checkpoints/
 .virtual_documents/
