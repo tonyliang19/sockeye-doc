@@ -22,12 +22,12 @@ then
     mkdir -p $IMAGE_PATH
     cd $IMAGE_PATH
     echo "Path created at ${IMAGE_PATH} and image pulled to here"
-    singularity -v pull --disable-cache  --name $NAME $IMAGE_NAME
+    singularity -v pull  --force --disable-cache  --name $NAME $IMAGE_NAME
     echo "Image successfully pulled to ${IMAGE_PATH}"
 else
     cd $IMAGE_PATH
     echo "Pulling image at ${IMAGE_PATH}"
-    singularity -v pull --disable-cache  --name $NAME $IMAGE_NAME
+    singularity -v pull  --force --disable-cache  --name $NAME $IMAGE_NAME
     echo "Image successfully pulled to ${IMAGE_PATH}"
 
 fi
