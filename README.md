@@ -2,7 +2,7 @@
 
 By: Tony Liang 2022
 
-This is a documentation for setup singularity container + conda environment on sockeye ARC, for full reference see [here](https://confluence.it.ubc.ca/display/UARC/Quickstart+Guide#QuickstartGuide-ConnectingtoSockeye)
+This is a documentation for setup singularity container + conda environment on sockeye ARC, for full reference see [here](https://confluence.it.ubc.ca/display/UARC/Quickstart+Guide#QuickstartGuide-ConnectingtoSockeye).
 
 
 Table of Contents:
@@ -10,6 +10,10 @@ Table of Contents:
  2. [Setup a singularity container](#setup-a-singularity-container)
  3. [Running jobs to spawn your container](#running-jobs-to-spawn-your-container)
  4. [Setup a conda environment](#setup-a-conda-environment)
+ 
+ Links to Step-by-Step tutorials:
+  - [Jupyter](jupyter/README.md)
+  - [Rstudio](Rstudio/README.md)
 
 ## Sockeye and its environment
 
