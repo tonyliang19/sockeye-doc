@@ -21,6 +21,8 @@ cd  $IMAGE_PATH
 # first arg is name of container with .sandbox extension
 # second arg is docker://registry/image_name
 apptainer build --sandbox <name>.sandbox docker://rocker/[rstudio | tidyverse | any other image]
+# CAREFUL WITH THIS ONE ^^^^ TAKES LONG TIME TO, its literally downloading whole space down and not .sif
+
 ```
 
 Then you could mess around with that `sandbox` with following:
