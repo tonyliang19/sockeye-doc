@@ -31,7 +31,7 @@
 #PBS -N rstudio_server
 #PBS -A st-singha53-1
 #PBS -m abe
-#PBS -M <EMAIL_GOES_HERE>
+#PBS -M chunqingliang@gmail.com
 
 ################################################################################
 
