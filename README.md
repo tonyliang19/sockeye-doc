@@ -1,8 +1,16 @@
 # UBC ARC Sockeye Documentation Cheat Sheet
 
-By: Tony Liang 2022
+By: Tony Liang 2022-2023
 
-This is a documentation for setup singularity container + conda environment on sockeye ARC, for full reference see [here](https://confluence.it.ubc.ca/display/UARC/Quickstart+Guide#QuickstartGuide-ConnectingtoSockeye).
+> Last Updated: Jul 2023
+
+---
+
+This is a documentation for using UBC ARC Sockeye on PBS Pro clusters, for the full reference guide from the ARC Team, please see [here](https://confluence.it.ubc.ca/display/UARC/Quickstart+Guide#QuickstartGuide-ConnectingtoSockeye).
+
+This is still under development
+
+> If you wish to see the presentation version, please redirect to these [slides](https://tonyliang19.github.io/arc-sockeye).
 
 
 Table of Contents:
